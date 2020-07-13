@@ -1,14 +1,14 @@
 {
   "dnsname": "{{ clusterid }}",
   "nodes": {
-    "mysql_node0": {
-      "docker_image": "docker-registry.cesga.es:5000/mariadb:10.1.19",
-      "docker_opts": "-e MYSQL_ROOT_PASSWORD={{ opts['password'] }} ",
+    "postgresql_node0": {
+      "docker_image": "docker-registry.cesga.es:5000/postgresql:9.3",
+      "docker_opts": "-e POSTGRES_PASSWORD={{ opts['password'] }} ",
       "cpu": {{ opts['cpu'] }},
       "mem": {{ opts['mem'] }},
       "disks": {
         "disk0": {
-          "destination": "/var/lib/mysql"
+          "destination":  "/data"
         }
       },
       "networks": {
@@ -18,6 +18,6 @@
     }
   },
   "services": {
-      "mysql": { "nodes": ["mysql_node0"] }
+      "postgresql": { "nodes": ["postgresql_node0"] }
   }
 }

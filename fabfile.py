@@ -190,12 +190,8 @@ if os.environ.get('NOOP'):
 
 #
 # CONFIGURATION FILE TEMPLATES
-#
-# /etc/mysql/my.cnf
-# The MariaDB startup configuration is specified in the file /etc/mysql/my.cnf,
-# and that file in turn includes any files found in the /etc/mysql/conf.d
-# directory that end with .cnf.
-MYSQL_CONF = """ 
+# /etc/postgresql/X.X/main/postgresql.conf
+POSTGRESQL_CONF = """ 
 """
 
 

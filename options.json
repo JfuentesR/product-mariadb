@@ -9,7 +9,7 @@
     "advanced": {
     },
     "descriptions": {
-        "password": "The password that will be set for the MariaDB root superuser account",
+        "password": "The password that will be set for the PostgreSQL postgresql superuser account",
         "cpu": "Number of CPUs per node",
         "mem": "Memory per node (MB)"
     }

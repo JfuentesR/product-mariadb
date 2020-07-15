@@ -1,8 +1,8 @@
 {
   "dnsname": "{{ clusterid }}",
   "nodes": {
-    "postgresql_node0": {
-      "docker_image": "docker-registry.cesga.es:5000/postgres:9.3",
+    "postgresqlbeta_node0": {
+      "docker_image": "docker-registry.cesga.es:5000/postgres:11.8",
       "docker_opts": "-e POSTGRES_PASSWORD={{ opts['password'] }} ",
       "cpu": {{ opts['cpu'] }},
       "mem": {{ opts['mem'] }},
@@ -18,6 +18,6 @@
     }
   },
   "services": {
-      "postgresql": { "nodes": ["postgresql_node0"] }
+      "postgresqlbeta": { "nodes": ["postgresqlbeta_node0"] }
   }
 }

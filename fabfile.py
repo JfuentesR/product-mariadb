@@ -200,23 +200,20 @@ POSTGRESQL_CONF = """
 def start():
     """Start the service"""
     print('No orchestration needed.')
-    print('Status:')
-    run('ps -elf|grep mysql|grep -v grep')
     cluster.status = 'running'
 
 
 @task
 def status():
     """Check the status of the service"""
-    run('ps -elf|grep mysql|grep -v grep')
+    print(red('Not supported.'))
 
 
 @task
 @runs_once
 def stop():
     """Stop the service and all the containers that provide it"""
-    with settings(warn_only=True):
-        run('killall mysqld')
+    print(red('Not supported.'))
 
 
 @task

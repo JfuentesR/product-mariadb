@@ -3,7 +3,7 @@
   "nodes": {
     "postgresqlbeta_node0": {
       "docker_image": "docker-registry.cesga.es:5000/postgresql:9.3",
-      "docker_opts": "-e POSTGRES_PASSWORD={{ opts['password'] }} POSTGRES_USER={{ opts['user'] }} ",
+      "docker_opts": "-e POSTGRES_PASSWORD={{ opts['password'] }} -e POSTGRES_USER={{ opts['user'] }} ",
       "cpu": {{ opts['cpu'] }},
       "mem": {{ opts['mem'] }},
       "disks": {

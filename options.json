@@ -1,6 +1,5 @@
 {
     "required": {
-        "user": "postgres",
       "password": "secret"
     },
     "optional": {

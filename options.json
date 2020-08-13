@@ -10,7 +10,7 @@
     },
     "descriptions": {
         "user": "User with superuser power",
-        "password": "The password that will be set for the PostgreSQL postgresql superuser account",
+        "password": "Numerical password that will be set for the PostgreSQL postgresql superuser account",
         "cpu": "Number of CPUs per node",
         "mem": "Memory per node (MB)"
     }

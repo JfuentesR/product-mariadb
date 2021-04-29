@@ -2,7 +2,7 @@
   "dnsname": "{{ clusterid }}",
   "nodes": {
     "postgresql_node0": {
-      "docker_image": "docker-registry.cesga.es:5000/postgresql:V1",
+      "docker_image": "docker-registry.cesga.es:5000/postgresql:12",
       "docker_opts": "-e POSTGRES_PASSWORD={{ opts['password'] }} -e POSTGRES_USER=postgresql -e POSTGRES_DB=test ",
       "cpu": {{ opts['cpu'] }},
       "mem": {{ opts['mem'] }},
